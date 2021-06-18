@@ -1,6 +1,7 @@
 package com.redbee.academy.challenge;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class SumArrayNumbers {
 
@@ -12,7 +13,6 @@ public class SumArrayNumbers {
    * @return The result of 1 + 2 + 3
    */
   public static Integer sum(List<Integer> array) {
-    //TODO: Implement me
-    return null;
+    return array.stream().reduce(0, Integer::sum);
   }
 }

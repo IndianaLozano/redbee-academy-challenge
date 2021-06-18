@@ -1,5 +1,9 @@
 package com.redbee.academy.challenge;
 
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class CompareNumbers {
 
   /**
@@ -12,7 +16,9 @@ public class CompareNumbers {
    * @return The max of a, b and c
    */
   public static Integer max(Integer a, Integer b, Integer c) {
-    //TODO: Implement me
-    return null;
+    List<Integer> list = Stream.of(a, b, c)
+            .filter(Objects::nonNull)
+            .collect(Collectors.toList());
+    return Collections.max(list);
   }
 }
